@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" id="home">
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -119,10 +119,10 @@
 <body class="no-skin">
 
 
-  <div id="navbar" class="navbar navbar-default          ace-save-state navbar-fixed-top">
+  <div id="navbar" class="navbar navbar-fixed-top navbar-default          ace-save-state ">
     <!-- bagian navbar header -->
     <div class="navbar-container ace-save-state" id="navbar-container">
-      <a href="index.html" class="navbar-brand">
+      <a href="#home" class="navbar-brand page-scroll">
         <small>
           <i class="fa fa-paperclip"></i>
           Curiculum Vitae
@@ -166,7 +166,7 @@
                   <i class="menu-icon fa fa-file-o"></i>
 
                   <span class="menu-text">
-                    INI Menu
+                    Shortcuts Section
 
                     <!-- <span class="badge badge-primary">5</span> -->
                   </span>
@@ -177,34 +177,34 @@
                 <b class="arrow"></b>
 
                 <ul class="submenu">
-                  <li class="">
-                    <a href="http://localhost:4040/myprofile">
+                  <li class="page-scroll">
+                    <a href="#EXPERIENCE" class="page-scroll">
                       <i class="menu-icon fa fa-caret-right"></i>
-                      Biodataku
+                      Experience
+                    </a>
+
+                    <b class="arrow"></b>
+                  </li>
+
+                  <li class="page-scroll">
+                    <a href="#ABOUT_ME" class="page-scroll">
+                      <i class="menu-icon fa fa-caret-right"></i>
+                      About Me
                     </a>
 
                     <b class="arrow"></b>
                   </li>
 
                   <li class="">
-                    <a href="http://localhost:4040/mhs">
+                    <a href="#HISTORY" class="page-scroll">
                       <i class="menu-icon fa fa-caret-right"></i>
-                      Data Mahasiswa
+                      Employment History
                     </a>
 
                     <b class="arrow"></b>
                   </li>
 
-                  <li class="">
-                    <a href="http://localhost:4040/error-500.html">
-                      <i class="menu-icon fa fa-caret-right"></i>
-                      Error 500
-                    </a>
-
-                    <b class="arrow"></b>
-                  </li>
-
-                  <li class="">
+                  <li class="page-scroll">
                     <a href="http://localhost:4040/grid.html">
                       <i class="menu-icon fa fa-caret-right"></i>
                       Grid
@@ -213,7 +213,7 @@
                     <b class="arrow"></b>
                   </li>
 
-                  <li class="">
+                  <li class="page-scroll">
                     <a href="http://localhost:4040/blank.html">
                       <i class="menu-icon fa fa-caret-right"></i>
                       Blank Page
@@ -416,7 +416,7 @@
                 </div><!-- /.row -->
 
                 <!-- //===== -->
-                <div class="row">
+                <div class="row" id="HISTORY">
 
 
                   <div class="col-xs-12 col-sm-12 col-md-12 col-l-12 widget-container-col ui-sortable" id="widget-container-col-2" style="min-height: 263px;">
@@ -503,7 +503,7 @@
 
                 <div class="space-20"></div>
 
-                <div class="row">
+                <div class="row" id="ABOUT_ME">
                   <div class="col-xs-12 col-sm-6">
                     <div class="widget-box transparent">
                       <div class="widget-header widget-header-small">
@@ -937,7 +937,7 @@
 
 
   <!--[if !IE]> -->
-  <script src="./Profil/jquery-2.1.4.min.js"></script>
+  <script src="./Profil/jquery-3.4.1.min.js"></script>
   <script src="./Profil/jquery.min.js"></script>
   <!-- <script src=""></script> -->
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
@@ -965,7 +965,7 @@
 
 
   <!-- inline scripts related to data table page -->
-  <script type="text/javascript">
+  <!-- <script type="text/javascript">
     jQuery(function($) {
       //initiate dataTables plugin
       var myTable =
@@ -1208,14 +1208,14 @@
 
 
     })
-  </script>
+  </script> -->
 
 
 
 
   <!-- untuk smooth scro efek -->
-
-  <script>
+  <script src="./Profil/myscroll.js"></script>
+  <!-- <script>
     $(document).ready(function() {
       // Add smooth scrolling to all links
       $("#smooth_menu a").on('click', function(event) {
@@ -1240,7 +1240,7 @@
         } // End if
       });
     });
-  </script>
+  </script> -->
 
 
 
