@@ -328,7 +328,7 @@
                         <div class="profile-info-name"> Usia </div>
 
                         <div class="profile-info-value">
-                          <span>34</span>
+                          <span id="usiaku">34</span>
                         </div>
                       </div>
 
@@ -1305,30 +1305,61 @@
   <!-- untuk linkaran grafik efek -->
   <script type="text/javascript">
     //////////////////////////////
-    $('#profile-feed-1').ace_scroll({
-      height: '250px',
-      mouseWheelLock: true,
-      alwaysVisible: true
-    });
+    // $('#profile-feed-1').ace_scroll({
+    //   height: '250px',
+    //   mouseWheelLock: true,
+    //   alwaysVisible: true
+    // });
 
-    $('a[ data-original-title]').tooltip();
+    // $('a[ data-original-title]').tooltip();
 
-    $('.easy-pie-chart.percentage').each(function () {
-      var barColor = $(this).data('color') || '#555';
-      var trackColor = '#E2E2E2';
-      var size = parseInt($(this).data('size')) || 72;
-      $(this).easyPieChart({
-        barColor: barColor,
-        trackColor: trackColor,
-        scaleColor: false,
-        lineCap: 'butt',
-        lineWidth: parseInt(size / 10),
-        animate: false,
-        size: size
-      }).css('color', barColor);
-    });
+    // $('.easy-pie-chart.percentage').each(function () {
+    //   var barColor = $(this).data('color') || '#555';
+    //   var trackColor = '#E2E2E2';
+    //   var size = parseInt($(this).data('size')) || 72;
+    //   $(this).easyPieChart({
+    //     barColor: barColor,
+    //     trackColor: trackColor,
+    //     scaleColor: false,
+    //     lineCap: 'butt',
+    //     lineWidth: parseInt(size / 10),
+    //     animate: false,
+    //     size: size
+    //   }).css('color', barColor);
+    // });
 
     ///////////////////////////////////////////
+
+
+    function hitungUsia(tanggalLahir) {
+      // Mengambil tanggal saat ini
+      const sekarang = new Date();
+      // Mengubah tanggal lahir dari string menjadi objek Date
+      const tanggalLahirDate = new Date(tanggalLahir);
+
+      // Menghitung usia dalam tahun
+      let usia = sekarang.getFullYear() - tanggalLahirDate.getFullYear();
+      const bulan = sekarang.getMonth() - tanggalLahirDate.getMonth();
+      const hari = sekarang.getDate() - tanggalLahirDate.getDate();
+
+      // Memperhitungkan bulan dan hari untuk menghitung usia yang tepat
+      if (bulan < 0 || (bulan === 0 && hari < 0)) {
+        usia--;
+      }
+
+      return usia;
+    }
+
+    // Contoh penggunaan
+    const tanggalLahir = "1985-11-10"; // Format: YYYY-MM-DD
+    const usia = hitungUsia(tanggalLahir);
+    console.log(`Usia Anda adalah: ${usia} Tahun`);
+
+    // Mengambil elemen dengan id 'usiaku'
+    const usiaElement = document.getElementById('usiaku');
+    // Mengganti teks elemen dengan usia yang telah dihitung
+    usiaElement.textContent = `${usia} Tahun`;
+
   </script>
 
 
